@@ -932,23 +932,23 @@ void Interpreter::ProcessState(int argc, char *argv[])
         switch (otGetDeviceRole())
         {
         case kDeviceRoleDisabled:
-            sResponse.Append("disabled\r\n");
+            sResponse.Append("disabled\n");
             break;
 
         case kDeviceRoleDetached:
-            sResponse.Append("detached\r\n");
+            sResponse.Append("detached\n");
             break;
 
         case kDeviceRoleChild:
-            sResponse.Append("child\r\n");
+            sResponse.Append("child\n");
             break;
 
         case kDeviceRoleRouter:
-            sResponse.Append("router\r\n");
+            sResponse.Append("router\n");
             break;
 
         case kDeviceRoleLeader:
-            sResponse.Append("leader\r\n");
+            sResponse.Append("leader\n");
             break;
         }
     }

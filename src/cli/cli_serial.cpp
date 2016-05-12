@@ -150,7 +150,32 @@ ThreadError Serial::ProcessCommand(void)
 
 ThreadError Serial::Output(const char *aBuf, uint16_t aBufLength)
 {
+#if 0
     return otPlatSerialSend(reinterpret_cast<const uint8_t *>(aBuf), aBufLength);
+#else
+    ThreadError ret = kThreadError_None;
+
+    while((ret == kThreadError_None) && (aBufLength > 0)) {
+        int i = 0;
+        for (; i<aBufLength; ++i) {
+            if (aBuf[i] == '\n') {
+                ++i;
+                break;
+            }
+        }
+        ret = otPlatSerialSend(reinterpret_cast<const uint8_t *>(aBuf), i);
+        if (ret) {
+            break;
+        }
+        if (aBuf[i-1]) {
+            ret = otPlatSerialSend(reinterpret_cast<const uint8_t *>("\r"), 1);
+        }
+        aBuf += i;
+        aBufLength -= i;
+    }
+
+    return ret;
+#endif
 }
 
 }  // namespace Cli
