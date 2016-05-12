@@ -1,0 +1,2548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "OpenThread">
+      <FileRef
+         location = "group:bootstrap">
+      </FileRef>
+      <FileRef
+         location = "group:configure.ac">
+      </FileRef>
+      <Group
+         location = "group:doc"
+         name = "doc">
+         <FileRef
+            location = "group:Doxyfile.in">
+         </FileRef>
+         <FileRef
+            location = "group:Makefile.am">
+         </FileRef>
+         <FileRef
+            location = "group:index.dox">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Makefile.am">
+      </FileRef>
+      <FileRef
+         location = "group:openthread.mak">
+      </FileRef>
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <Group
+         location = "group:tests"
+         name = "tests">
+         <FileRef
+            location = "group:Makefile.am">
+         </FileRef>
+         <Group
+            location = "group:ncp"
+            name = "ncp">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <Group
+               location = "group:src"
+               name = "src">
+               <FileRef
+                  location = "group:Makefile.am">
+               </FileRef>
+               <FileRef
+                  location = "group:main.cpp">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:tools"
+               name = "tools">
+               <FileRef
+                  location = "group:Makefile.am">
+               </FileRef>
+               <Group
+                  location = "group:ncp-ctl"
+                  name = "ncp-ctl">
+                  <FileRef
+                     location = "group:Makefile.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.c">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.ggo">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:main.cpp">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:ncp-driver"
+                  name = "ncp-driver">
+                  <FileRef
+                     location = "group:Makefile.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.c">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.ggo">
+                  </FileRef>
+                  <FileRef
+                     location = "group:cmdline.h">
+                  </FileRef>
+                  <Group
+                     location = "group:darwin"
+                     name = "darwin">
+                     <FileRef
+                        location = "group:tun_netif.cpp">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:linux"
+                     name = "linux">
+                     <FileRef
+                        location = "group:tun_netif.cpp">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:main.cpp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:serial_port.cpp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:serial_port.hpp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:thread_driver.cpp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:thread_driver.hpp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:tun_netif.hpp">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+         <Group
+            location = "group:platform"
+            name = "platform">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <Group
+               location = "group:posix"
+               name = "posix">
+               <FileRef
+                  location = "group:Makefile.am">
+               </FileRef>
+               <FileRef
+                  location = "group:alarm.c">
+               </FileRef>
+               <FileRef
+                  location = "group:atomic.c">
+               </FileRef>
+               <FileRef
+                  location = "group:cli_posix.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:cli_posix.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:cmdline.c">
+               </FileRef>
+               <FileRef
+                  location = "group:cmdline.ggo">
+               </FileRef>
+               <FileRef
+                  location = "group:cmdline.h">
+               </FileRef>
+               <FileRef
+                  location = "group:logging.c">
+               </FileRef>
+               <FileRef
+                  location = "group:radio.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:random.c">
+               </FileRef>
+               <FileRef
+                  location = "group:serial.c">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:soc"
+            name = "soc">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <Group
+               location = "group:scripts"
+               name = "scripts">
+               <FileRef
+                  location = "group:Cert_5_1_01_RouterAttach.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_02_ChildAddressTimeout.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_03_RouterAddressReallocation.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_04_RouterAddressReallocation.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_05_RouterAddressTimeout.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_06_RemoveRouterId.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_07_MaxChildCount.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_08_RouterAttachConnectivity.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_09_REEDAttachConnectivity.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_10_RouterAttachLinkQuality.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_11_REEDAttachLinkQuality.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_12_NewRouterNeighborSync.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_1_13_RouterReset.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_01_BecomeActiveRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_02_LeaderReject1Hop.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_03_LeaderReject2Hops.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_04_REEDUpgrade.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_05_AddressQuery.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_2_07_REEDSynchronization.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_01_LinkLocal.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_02_RealmLocal.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_03_AddressQuery.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_04_AddressMapCache.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_05_RoutingLinkQuality.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_06_RouterIdMask.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_07_DuplicateAddress.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_08_ChildAddressSet.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_3_10_AddressQuery.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_01_LeaderReset.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_02_LeaderReboot.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_03_SplitMergeChildren.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_04_SplitMergeRouters.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_05_SplitMergeREED.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_06_SplitWeight.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_07_SplitMergeThreeWay.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_5_08_SplitRoutersLostLeader.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_01_NetworkDataRegisterBeforeAttachLeader.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_02_NetworkDataRegisterBeforeAttachRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_03_NetworkDataRegisterAfterAttachLeader.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_04_NetworkDataRegisterAfterAttachRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_05_NetworkDataRegisterAfterAttachRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_06_NetworkDataExpiration.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_07_NetworkDataRequestREED.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_08_ContextManagement.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_6_09_NetworkDataForwarding.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_8_01_KeySynchronization.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_8_02_KeyIncrement.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_5_8_03_KeyIncrementRollOver.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_01_RouterAttach.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_02_REEDAttach.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_03_RouterAttachConnectivity.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_04_REEDAttachConnectivity.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_05_RouterAttachLinkQuality.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_06_REEDAttachLinkQuality.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_1_07_EDSynchronization.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_2_01_NewPartition.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_2_02_NewPartition.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_3_01_OrphanReattach.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_3_02_NetworkDataUpdate.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_4_01_LinkLocal.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_4_02_RealmLocal.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_5_01_ChildResetSynchronize.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_5_02_ChildResetReattach.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_6_01_KeyIncrement.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_6_6_02_KeyIncrementRollOver.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_7_1_01_BorderRouterAsLeader.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_7_1_02_BorderRouterAsRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_7_1_03_BorderRouterAsLeader.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_7_1_04_BorderRouterAsRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Cert_7_1_05_BorderRouterAsRouter.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Test_Cli.py">
+               </FileRef>
+               <FileRef
+                  location = "group:Test_MacScan.py">
+               </FileRef>
+               <FileRef
+                  location = "group:__init__.py">
+               </FileRef>
+               <FileRef
+                  location = "group:node.py">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:src"
+               name = "src">
+               <FileRef
+                  location = "group:Makefile.am">
+               </FileRef>
+               <FileRef
+                  location = "group:main.cpp">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:unit"
+            name = "unit">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <FileRef
+               location = "group:test_aes.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:test_hmac_sha256.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:test_mac_frame.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:test_message.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:test_sha256.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:test_util.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:CONTRIBUTING.md">
+      </FileRef>
+      <Group
+         location = "group:include"
+         name = "include">
+         <FileRef
+            location = "group:openthread-types.h">
+         </FileRef>
+         <FileRef
+            location = "group:openthread.h">
+         </FileRef>
+         <Group
+            location = "group:platform"
+            name = "platform">
+            <FileRef
+               location = "group:alarm.h">
+            </FileRef>
+            <FileRef
+               location = "group:atomic.h">
+            </FileRef>
+            <FileRef
+               location = "group:logging.h">
+            </FileRef>
+            <FileRef
+               location = "group:radio.h">
+            </FileRef>
+            <FileRef
+               location = "group:random.h">
+            </FileRef>
+            <FileRef
+               location = "group:serial.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:LICENSE">
+      </FileRef>
+      <Group
+         location = "group:src"
+         name = "src">
+         <FileRef
+            location = "group:Makefile.am">
+         </FileRef>
+         <Group
+            location = "group:cli"
+            name = "cli">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <FileRef
+               location = "group:cli.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli_serial.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli_serial.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli_server.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli_udp.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:cli_udp.hpp">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:core"
+            name = "core">
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <Group
+               location = "group:coap"
+               name = "coap">
+               <FileRef
+                  location = "group:coap_header.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:coap_header.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:coap_server.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:coap_server.hpp">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:common"
+               name = "common">
+               <FileRef
+                  location = "group:code_utils.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:debug.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:encoding.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:logging.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:logging.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:message.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:message.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:tasklet.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:tasklet.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:timer.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:timer.hpp">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:crypto"
+               name = "crypto">
+               <FileRef
+                  location = "group:aes.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:aes_ccm.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:aes_ccm.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:aes_ecb.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:aes_ecb.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:hash.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:hmac.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:hmac.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:sha256.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:sha256.hpp">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:mac"
+               name = "mac">
+               <FileRef
+                  location = "group:mac.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mac.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mac_frame.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mac_frame.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mac_whitelist.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mac_whitelist.hpp">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:net"
+               name = "net">
+               <FileRef
+                  location = "group:icmp6.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:icmp6.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_address.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_address.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_mpl.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_mpl.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_routes.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:ip6_routes.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:netif.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:netif.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:socket.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:udp6.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:udp6.hpp">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:openthread-core-config.h">
+            </FileRef>
+            <FileRef
+               location = "group:openthread.cpp">
+            </FileRef>
+            <Group
+               location = "group:thread"
+               name = "thread">
+               <FileRef
+                  location = "group:address_resolver.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:address_resolver.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:key_manager.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:key_manager.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:lowpan.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:lowpan.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mesh_forwarder.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mesh_forwarder.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle_constants.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle_router.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle_router.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle_tlvs.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:mle_tlvs.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data_leader.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data_leader.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data_local.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data_local.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:network_data_tlvs.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:thread_netif.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:thread_netif.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:thread_tlvs.cpp">
+               </FileRef>
+               <FileRef
+                  location = "group:thread_tlvs.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:thread_uris.hpp">
+               </FileRef>
+               <FileRef
+                  location = "group:topology.hpp">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:ncp"
+            name = "ncp">
+            <FileRef
+               location = "group:PROTOCOL.md">
+            </FileRef>
+            <FileRef
+               location = "group:Makefile.am">
+            </FileRef>
+            <FileRef
+               location = "group:flen.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:/Users/rquattle/Projects/openthread/src/ncp/flen.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:hdlc.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:hdlc.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:ncp.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:ncp.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:ncp_base.cpp">
+            </FileRef>
+            <FileRef
+               location = "group:ncp_base.hpp">
+            </FileRef>
+            <FileRef
+               location = "group:spinel.c">
+            </FileRef>
+            <FileRef
+               location = "group:spinel.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:third_party"
+         name = "third_party">
+         <Group
+            location = "group:nlbuild-autotools"
+            name = "nlbuild-autotools">
+            <Group
+               location = "group:repo"
+               name = "repo">
+               <FileRef
+                  location = "group:CONTRIBUTING.md">
+               </FileRef>
+               <FileRef
+                  location = "group:LICENSE">
+               </FileRef>
+               <FileRef
+                  location = "group:README.md">
+               </FileRef>
+               <Group
+                  location = "group:autoconf"
+                  name = "autoconf">
+                  <FileRef
+                     location = "group:ar-lib">
+                  </FileRef>
+                  <FileRef
+                     location = "group:compile">
+                  </FileRef>
+                  <FileRef
+                     location = "group:config.guess">
+                  </FileRef>
+                  <FileRef
+                     location = "group:config.sub">
+                  </FileRef>
+                  <FileRef
+                     location = "group:depcomp">
+                  </FileRef>
+                  <FileRef
+                     location = "group:install-sh">
+                  </FileRef>
+                  <FileRef
+                     location = "group:ltmain.sh">
+                  </FileRef>
+                  <Group
+                     location = "group:m4"
+                     name = "m4">
+                     <FileRef
+                        location = "group:ax_check_compiler.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ax_check_file.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ax_check_preprocessor.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ax_jni_include_dir.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ax_prog_doxygen.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:libtool.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ltoptions.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ltsugar.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:ltversion.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:lt~obsolete.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_coverage.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_coverage_reporting.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_debug.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_docs.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_optimization.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_tests.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_enable_werror.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_filtered_canonical.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_prog_lndir.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_werror.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:nl_with_package.m4">
+                     </FileRef>
+                     <FileRef
+                        location = "group:pkg.m4">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:missing">
+                  </FileRef>
+                  <FileRef
+                     location = "group:mkinstalldirs">
+                  </FileRef>
+                  <FileRef
+                     location = "group:py-compile">
+                  </FileRef>
+                  <FileRef
+                     location = "group:test-driver">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:automake"
+                  name = "automake">
+                  <Group
+                     location = "group:post"
+                     name = "post">
+                     <Group
+                        location = "group:rules"
+                        name = "rules">
+                        <FileRef
+                           location = "group:coverage.am">
+                        </FileRef>
+                        <FileRef
+                           location = "group:headers.am">
+                        </FileRef>
+                     </Group>
+                     <FileRef
+                        location = "group:rules.am">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:post.am">
+                  </FileRef>
+                  <Group
+                     location = "group:pre"
+                     name = "pre">
+                     <Group
+                        location = "group:macros"
+                        name = "macros">
+                        <FileRef
+                           location = "group:constants.am">
+                        </FileRef>
+                        <FileRef
+                           location = "group:coverage.am">
+                        </FileRef>
+                        <FileRef
+                           location = "group:paths.am">
+                        </FileRef>
+                        <FileRef
+                           location = "group:subdirs.am">
+                        </FileRef>
+                        <FileRef
+                           location = "group:verbosity.am">
+                        </FileRef>
+                     </Group>
+                     <FileRef
+                        location = "group:macros.am">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:pre.am">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:etc"
+                  name = "etc">
+                  <FileRef
+                     location = "group:lcov.config">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:examples"
+                  name = "examples">
+                  <FileRef
+                     location = "group:Doxyfile.in">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Makefile-doc.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Makefile-fps.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Makefile-src.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Makefile-tests.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Makefile-toplevel.am">
+                  </FileRef>
+                  <FileRef
+                     location = "group:bootstrap">
+                  </FileRef>
+                  <FileRef
+                     location = "group:configure.ac">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:scripts"
+                  name = "scripts">
+                  <FileRef
+                     location = "group:bootstrap">
+                  </FileRef>
+                  <FileRef
+                     location = "group:bootstrap-configure">
+                  </FileRef>
+                  <FileRef
+                     location = "group:mkskeleton">
+                  </FileRef>
+                  <FileRef
+                     location = "group:mkversion">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:tools"
+                  name = "tools">
+                  <Group
+                     location = "group:host"
+                     name = "host">
+                     <Group
+                        location = "group:i686-pc-cygwin"
+                        name = "i686-pc-cygwin">
+                        <Group
+                           location = "group:bin"
+                           name = "bin">
+                           <FileRef
+                              location = "group:aclocal">
+                           </FileRef>
+                           <FileRef
+                              location = "group:aclocal-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoheader">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autom4te">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoreconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoscan">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoupdate">
+                           </FileRef>
+                           <FileRef
+                              location = "group:cygltdl-7.dll">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ifnames">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtoolize">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4.exe">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make.exe">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:i686-pc-linux-gnu"
+                        name = "i686-pc-linux-gnu">
+                        <Group
+                           location = "group:bin"
+                           name = "bin">
+                           <FileRef
+                              location = "group:aclocal">
+                           </FileRef>
+                           <FileRef
+                              location = "group:aclocal-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoheader">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autom4te">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoreconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoscan">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoupdate">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ifnames">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtoolize">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:lib"
+                           name = "lib">
+                           <FileRef
+                              location = "group:libltdl.a">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.la">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so.7">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so.7.3.0">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:include"
+                        name = "include">
+                        <Group
+                           location = "group:libltdl"
+                           name = "libltdl">
+                           <FileRef
+                              location = "group:lt_dlloader.h">
+                           </FileRef>
+                           <FileRef
+                              location = "group:lt_error.h">
+                           </FileRef>
+                           <FileRef
+                              location = "group:lt_system.h">
+                           </FileRef>
+                        </Group>
+                        <FileRef
+                           location = "group:ltdl.h">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:share"
+                        name = "share">
+                        <Group
+                           location = "group:aclocal"
+                           name = "aclocal">
+                           <FileRef
+                              location = "group:README">
+                           </FileRef>
+                           <FileRef
+                              location = "group:argz.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ltdl.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ltoptions.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ltsugar.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ltversion.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:lt~obsolete.m4">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:aclocal-1.14"
+                           name = "aclocal-1.14">
+                           <FileRef
+                              location = "group:amversion.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ar-lib.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:as.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:auxdir.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:cond-if.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:cond.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:depend.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:depout.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:dmalloc.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:extra-recurs.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:gcj.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:init.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:install-sh.m4">
+                           </FileRef>
+                           <Group
+                              location = "group:internal"
+                              name = "internal">
+                              <FileRef
+                                 location = "group:ac-config-macro-dirs.m4">
+                              </FileRef>
+                           </Group>
+                           <FileRef
+                              location = "group:lead-dot.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:lex.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:lispdir.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:maintainer.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:missing.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:mkdirp.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:obsolete.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:options.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:prog-cc-c-o.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:python.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:runlog.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:sanity.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:silent.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:strip.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:substnot.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:tar.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:upc.m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:vala.m4">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:autoconf"
+                           name = "autoconf">
+                           <Group
+                              location = "group:Autom4te"
+                              name = "Autom4te">
+                              <FileRef
+                                 location = "group:C4che.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ChannelDefs.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Channels.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Configure_ac.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:FileUtils.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:General.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Request.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Struct.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:XFile.pm">
+                              </FileRef>
+                           </Group>
+                           <FileRef
+                              location = "group:INSTALL">
+                           </FileRef>
+                           <Group
+                              location = "group:autoconf"
+                              name = "autoconf">
+                              <FileRef
+                                 location = "group:autoconf.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoconf.m4f">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoheader.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoscan.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autotest.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoupdate.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:c.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:erlang.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:fortran.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:functions.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:general.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:headers.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lang.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:libs.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:oldnames.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:programs.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:specific.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:status.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:types.m4">
+                              </FileRef>
+                           </Group>
+                           <FileRef
+                              location = "group:autom4te.cfg">
+                           </FileRef>
+                           <Group
+                              location = "group:autoscan"
+                              name = "autoscan">
+                              <FileRef
+                                 location = "group:autoscan.list">
+                              </FileRef>
+                           </Group>
+                           <Group
+                              location = "group:autotest"
+                              name = "autotest">
+                              <FileRef
+                                 location = "group:autotest.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autotest.m4f">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:general.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:specific.m4">
+                              </FileRef>
+                           </Group>
+                           <Group
+                              location = "group:m4sugar"
+                              name = "m4sugar">
+                              <FileRef
+                                 location = "group:foreach.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:m4sh.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:m4sh.m4f">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:m4sugar.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:m4sugar.m4f">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:version.m4">
+                              </FileRef>
+                           </Group>
+                        </Group>
+                        <Group
+                           location = "group:automake-1.14"
+                           name = "automake-1.14">
+                           <Group
+                              location = "group:Automake"
+                              name = "Automake">
+                              <FileRef
+                                 location = "group:ChannelDefs.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Channels.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Condition.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Config.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Configure_ac.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:DisjConditions.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:FileUtils.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:General.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Getopt.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Item.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ItemDef.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Language.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Location.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Options.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Rule.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:RuleDef.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:VarDef.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Variable.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Version.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Wrap.pm">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:XFile.pm">
+                              </FileRef>
+                           </Group>
+                           <FileRef
+                              location = "group:COPYING">
+                           </FileRef>
+                           <FileRef
+                              location = "group:INSTALL">
+                           </FileRef>
+                           <Group
+                              location = "group:am"
+                              name = "am">
+                              <FileRef
+                                 location = "group:check.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:check2.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:clean-hdr.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:clean.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:compile.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:configure.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:data.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:dejagnu.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:depend.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:depend2.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:distdir.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:footer.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:header-vars.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:header.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:inst-vars.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:install.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:java.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lang-compile.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lex.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:library.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:libs.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:libtool.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lisp.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ltlib.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ltlibrary.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:mans-vars.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:mans.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:program.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:progs.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:python.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:remake-hdr.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:scripts.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:subdirs.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:tags.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:texi-vers.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:texibuild.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:texinfos.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:vala.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:yacc.am">
+                              </FileRef>
+                           </Group>
+                           <FileRef
+                              location = "group:ar-lib">
+                           </FileRef>
+                           <FileRef
+                              location = "group:compile">
+                           </FileRef>
+                           <FileRef
+                              location = "group:config.guess">
+                           </FileRef>
+                           <FileRef
+                              location = "group:config.sub">
+                           </FileRef>
+                           <FileRef
+                              location = "group:depcomp">
+                           </FileRef>
+                           <FileRef
+                              location = "group:install-sh">
+                           </FileRef>
+                           <FileRef
+                              location = "group:mdate-sh">
+                           </FileRef>
+                           <FileRef
+                              location = "group:missing">
+                           </FileRef>
+                           <FileRef
+                              location = "group:mkinstalldirs">
+                           </FileRef>
+                           <FileRef
+                              location = "group:py-compile">
+                           </FileRef>
+                           <FileRef
+                              location = "group:tap-driver.pl">
+                           </FileRef>
+                           <FileRef
+                              location = "group:tap-driver.sh">
+                           </FileRef>
+                           <FileRef
+                              location = "group:test-driver">
+                           </FileRef>
+                           <FileRef
+                              location = "group:texinfo.tex">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ylwrap">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:doc"
+                           name = "doc">
+                           <Group
+                              location = "group:automake"
+                              name = "automake">
+                              <FileRef
+                                 location = "group:amhello-1.0.tar.gz">
+                              </FileRef>
+                           </Group>
+                        </Group>
+                        <Group
+                           location = "group:emacs"
+                           name = "emacs">
+                           <Group
+                              location = "group:site-lisp"
+                              name = "site-lisp">
+                              <FileRef
+                                 location = "group:autoconf-mode.el">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoconf-mode.elc">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autotest-mode.el">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autotest-mode.elc">
+                              </FileRef>
+                           </Group>
+                        </Group>
+                        <Group
+                           location = "group:info"
+                           name = "info">
+                           <FileRef
+                              location = "group:autoconf.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake-history.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake.info-1">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake.info-2">
+                           </FileRef>
+                           <FileRef
+                              location = "group:coreutils.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:dir">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool.info-1">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool.info-2">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4.info-1">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4.info-2">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make.info">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make.info-1">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make.info-2">
+                           </FileRef>
+                           <FileRef
+                              location = "group:standards.info">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:libtool"
+                           name = "libtool">
+                           <Group
+                              location = "group:config"
+                              name = "config">
+                              <FileRef
+                                 location = "group:compile">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:config.guess">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:config.sub">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:depcomp">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:install-sh">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ltmain.sh">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:missing">
+                              </FileRef>
+                           </Group>
+                           <Group
+                              location = "group:libltdl"
+                              name = "libltdl">
+                              <FileRef
+                                 location = "group:COPYING.LIB">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Makefile.am">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Makefile.in">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:Makefile.inc">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:README">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:aclocal.m4">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:argz.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:argz_.h">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:config-h.in">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:configure">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:configure.ac">
+                              </FileRef>
+                              <Group
+                                 location = "group:libltdl"
+                                 name = "libltdl">
+                                 <FileRef
+                                    location = "group:lt__alloc.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt__dirent.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt__glibc.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt__private.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt__strl.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt_dlloader.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt_error.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:lt_system.h">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:slist.h">
+                                 </FileRef>
+                              </Group>
+                              <Group
+                                 location = "group:loaders"
+                                 name = "loaders">
+                                 <FileRef
+                                    location = "group:dld_link.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:dlopen.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:dyld.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:load_add_on.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:loadlibrary.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:preopen.c">
+                                 </FileRef>
+                                 <FileRef
+                                    location = "group:shl_load.c">
+                                 </FileRef>
+                              </Group>
+                              <FileRef
+                                 location = "group:lt__alloc.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lt__dirent.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lt__strl.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lt_dlloader.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:lt_error.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ltdl.c">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ltdl.h">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:slist.c">
+                              </FileRef>
+                           </Group>
+                        </Group>
+                        <Group
+                           location = "group:locale"
+                           name = "locale">
+                           <Group
+                              location = "group:be"
+                              name = "be">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:da"
+                              name = "da">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:de"
+                              name = "de">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:es"
+                              name = "es">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:fi"
+                              name = "fi">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:fr"
+                              name = "fr">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:ga"
+                              name = "ga">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:gl"
+                              name = "gl">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:he"
+                              name = "he">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:hr"
+                              name = "hr">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:id"
+                              name = "id">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:it"
+                              name = "it">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:ja"
+                              name = "ja">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:ko"
+                              name = "ko">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:lt"
+                              name = "lt">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:nl"
+                              name = "nl">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:pl"
+                              name = "pl">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:pt_BR"
+                              name = "pt_BR">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:ru"
+                              name = "ru">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:sv"
+                              name = "sv">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:tr"
+                              name = "tr">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:uk"
+                              name = "uk">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:vi"
+                              name = "vi">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                           <Group
+                              location = "group:zh_CN"
+                              name = "zh_CN">
+                              <Group
+                                 location = "group:LC_MESSAGES"
+                                 name = "LC_MESSAGES">
+                                 <FileRef
+                                    location = "group:make.mo">
+                                 </FileRef>
+                              </Group>
+                           </Group>
+                        </Group>
+                        <Group
+                           location = "group:man"
+                           name = "man">
+                           <Group
+                              location = "group:man1"
+                              name = "man1">
+                              <FileRef
+                                 location = "group:aclocal-1.14.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:aclocal.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoconf.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoheader.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autom4te.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:automake-1.14.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:automake.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoreconf.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoscan.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:autoupdate.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:config.guess.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:config.sub.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:cp.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:ifnames.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:libtool.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:libtoolize.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:m4.1">
+                              </FileRef>
+                              <FileRef
+                                 location = "group:make.1">
+                              </FileRef>
+                           </Group>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:x86_64-apple-darwin"
+                        name = "x86_64-apple-darwin">
+                        <Group
+                           location = "group:bin"
+                           name = "bin">
+                           <FileRef
+                              location = "group:aclocal">
+                           </FileRef>
+                           <FileRef
+                              location = "group:aclocal-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoheader">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autom4te">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoreconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoscan">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoupdate">
+                           </FileRef>
+                           <FileRef
+                              location = "group:cp">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ifnames">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtoolize">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:lib"
+                           name = "lib">
+                           <FileRef
+                              location = "group:libltdl.7.dylib">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.a">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.dylib">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.la">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                     <Group
+                        location = "group:x86_64-unknown-linux-gnu"
+                        name = "x86_64-unknown-linux-gnu">
+                        <Group
+                           location = "group:bin"
+                           name = "bin">
+                           <FileRef
+                              location = "group:aclocal">
+                           </FileRef>
+                           <FileRef
+                              location = "group:aclocal-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoheader">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autom4te">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake">
+                           </FileRef>
+                           <FileRef
+                              location = "group:automake-1.14">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoreconf">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoscan">
+                           </FileRef>
+                           <FileRef
+                              location = "group:autoupdate">
+                           </FileRef>
+                           <FileRef
+                              location = "group:cp">
+                           </FileRef>
+                           <FileRef
+                              location = "group:ifnames">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtool">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libtoolize">
+                           </FileRef>
+                           <FileRef
+                              location = "group:m4">
+                           </FileRef>
+                           <FileRef
+                              location = "group:make">
+                           </FileRef>
+                        </Group>
+                        <Group
+                           location = "group:lib"
+                           name = "lib">
+                           <FileRef
+                              location = "group:libltdl.a">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.la">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so.7">
+                           </FileRef>
+                           <FileRef
+                              location = "group:libltdl.so.7.3.0">
+                           </FileRef>
+                        </Group>
+                     </Group>
+                  </Group>
+                  <Group
+                     location = "group:packages"
+                     name = "packages">
+                     <Group
+                        location = "group:autoconf"
+                        name = "autoconf">
+                        <FileRef
+                           location = "group:autoconf.tar.gz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:autoconf.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:autoconf.version">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:automake"
+                        name = "automake">
+                        <FileRef
+                           location = "group:automake.tar.gz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:automake.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:automake.version">
+                        </FileRef>
+                     </Group>
+                     <FileRef
+                        location = "group:build">
+                     </FileRef>
+                     <FileRef
+                        location = "group:clean">
+                     </FileRef>
+                     <Group
+                        location = "group:coreutils"
+                        name = "coreutils">
+                        <FileRef
+                           location = "group:coreutils.tar.xz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:coreutils.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:coreutils.version">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:libtool"
+                        name = "libtool">
+                        <FileRef
+                           location = "group:libtool.tar.gz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:libtool.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:libtool.version">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:m4"
+                        name = "m4">
+                        <FileRef
+                           location = "group:m4.tar.gz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:m4.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:m4.version">
+                        </FileRef>
+                     </Group>
+                     <Group
+                        location = "group:make"
+                        name = "make">
+                        <FileRef
+                           location = "group:make.tar.gz">
+                        </FileRef>
+                        <FileRef
+                           location = "group:make.url">
+                        </FileRef>
+                        <FileRef
+                           location = "group:make.version">
+                        </FileRef>
+                     </Group>
+                     <FileRef
+                        location = "group:packages">
+                     </FileRef>
+                  </Group>
+               </Group>
+            </Group>
+         </Group>
+         <Group
+            location = "group:protobuf"
+            name = "protobuf">
+            <FileRef
+               location = "group:Protobuf.am">
+            </FileRef>
+            <FileRef
+               location = "group:protobuf-c.c">
+            </FileRef>
+            <FileRef
+               location = "group:protobuf-c.h">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+</Workspace>
