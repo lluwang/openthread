@@ -28,22 +28,45 @@
 
 include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
-# Always package (e.g. for 'make dist') these subdirectories.
-
-DIST_SUBDIRS                            = \
-    cli                                   \
-    core                                  \
-    ncp                                   \
+EXTRA_DIST                          = \
+    PROTOCOL.md                       \
     $(NULL)
 
-# Always build (e.g. for 'make all') these subdirectories.
+# Pull in the sources that comprise the OpenThread NCP library.
 
-SUBDIRS                                 = \
-    cli                                   \
-    core                                  \
-    ncp                                   \
+lib_LIBRARIES                       = libopenthread-ncp.a
+
+libopenthread_ncp_a_CPPFLAGS        = \
+    -I$(top_srcdir)/include           \
+    -I$(top_srcdir)/src               \
+    -I$(top_srcdir)/src/core          \
+    -I$(top_srcdir)/third_party       \
+    $(OPENTHREAD_TARGET_DEFINES)      \
     $(NULL)
 
-all:
+libopenthread_ncp_a_CXXFLAGS        = \
+    -I$(top_srcdir)/include           \
+    -I$(top_srcdir)/src               \
+    -I$(top_srcdir)/src/core          \
+    -I$(top_srcdir)/third_party       \
+    $(OPENTHREAD_TARGET_DEFINES)      \
+    $(NULL)
+
+libopenthread_ncp_a_SOURCES         = \
+    hdlc.cpp                          \
+    flen.cpp                          \
+    ncp.cpp                           \
+    spinel.c spinel.h                 \
+    ncp_base.cpp                      \
+    $(NULL)
+
+include_HEADERS                     = \
+    $(NULL)
+
+install-headers: install-includeHEADERS
+
+if OPENTHREAD_BUILD_COVERAGE
+CLEANFILES                          = $(wildcard *.gcda *.gcno)
+endif # OPENTHREAD_BUILD_COVERAGE
 
 include $(abs_top_nlbuild_autotools_dir)/automake/post.am

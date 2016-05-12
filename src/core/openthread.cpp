@@ -45,6 +45,8 @@
 
 namespace Thread {
 
+ThreadNetif *sThreadNetif;
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -54,8 +56,6 @@ extern "C" {
     align_type name[(((size) + (sizeof (align_type) - 1)) / sizeof (align_type))]
 
 static otDEFINE_ALIGNED_VAR(sThreadNetifRaw, sizeof(ThreadNetif), uint64_t);
-
-static ThreadNetif *sThreadNetif;
 
 static void HandleActiveScanResult(void *aContext, Mac::Frame *aFrame);
 
