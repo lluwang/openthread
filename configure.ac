@@ -204,6 +204,7 @@ AC_PROG_CXX_C_O
 # Check for other compiler toolchain tools.
 
 AC_CHECK_TOOL(AR, ar)
+AC_CHECK_TOOL(ASTYLE, astyle)
 AC_CHECK_TOOL(RANLIB, ranlib)
 AC_CHECK_TOOL(OBJCOPY, objcopy)
 AC_CHECK_TOOL(STRIP, strip)
@@ -481,6 +482,7 @@ AC_MSG_NOTICE([
   C++ Compile flags                         : ${CXXFLAGS:--}
   Link flags                                : ${LDFLAGS:--}
   Link libraries                            : ${LIBS}
+  Astyle                                    : ${ASTYLE}
 
 ])
 
