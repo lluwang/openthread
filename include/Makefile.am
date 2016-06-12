@@ -32,6 +32,7 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
 DIST_SUBDIRS                            = \
     cli                                   \
+    commissioning                         \
     crypto                                \
     ncp                                   \
     platform                              \
@@ -41,6 +42,7 @@ DIST_SUBDIRS                            = \
 
 SUBDIRS                                 = \
     cli                                   \
+    commissioning                         \
     crypto                                \
     ncp                                   \
     platform                              \
@@ -50,6 +52,7 @@ SUBDIRS                                 = \
 
 PRETTY_SUBDIRS                          = \
     cli                                   \
+    commissioning                         \
     crypto                                \
     ncp                                   \
     platform                              \

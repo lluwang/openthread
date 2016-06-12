@@ -52,7 +52,6 @@ AM_CPPFLAGS                                                         = \
     -I$(top_srcdir)/include                                           \
     -I$(top_srcdir)/src                                               \
     -I$(top_srcdir)/src/core                                          \
-    -I$(top_srcdir)/third_party/mbedtls/repo/include                  \
     $(NULL)
 
 COMMON_LDADD                                                        = \

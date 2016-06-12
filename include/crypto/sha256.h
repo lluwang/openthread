@@ -26,63 +26,63 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "test_util.h"
+/**
+ * @file
+ * @brief
+ *   This file includes the platform abstraction for SHA-256 computations.
+ */
 
-#include <string.h>
+#ifndef OPENTHREAD_SHA256_H_
+#define OPENTHREAD_SHA256_H_
 
-#include <openthread.h>
-#include <crypto/crypto.h>
-#include <crypto/hmac_sha256.h>
+#include <stdint.h>
 
-#include <common/debug.hpp>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-extern"C" void otSignalTaskletPending(void)
+/**
+ * @addtogroup core-security
+ *
+ * @{
+ *
+ */
+
+enum
 {
-}
+    otCryptoSha256Size = 32,  ///< SHA-256 hash size (bytes)
+};
 
-void TestHmacSha256(void)
-{
-    static const struct
-    {
-        const char *key;
-        const char *data;
-        uint8_t hash[otCryptoSha256Size];
-    } tests[] =
-    {
-        {
-            "\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b",
-            "Hi There",
-            {
-                0xb0, 0x34, 0x4c, 0x61, 0xd8, 0xdb, 0x38, 0x53,
-                0x5c, 0xa8, 0xaf, 0xce, 0xaf, 0x0b, 0xf1, 0x2b,
-                0x88, 0x1d, 0xc2, 0x00, 0xc9, 0x83, 0x3d, 0xa7,
-                0x26, 0xe9, 0x37, 0x6c, 0x2e, 0x32, 0xcf, 0xf7,
-            },
-        },
-        {
-            NULL,
-            NULL,
-            {},
-        },
-    };
+/**
+ * This method starts the SHA-256 computation.
+ *
+ */
+void otCryptoSha256Start(void);
 
-    uint8_t hash[otCryptoSha256Size];
+/**
+ * This method inputs bytes into the SHA-256 computation.
+ *
+ * @param[in]  aBuf        A pointer to the input buffer.
+ * @param[in]  aBufLength  The length of @p aBuf in bytes.
+ *
+ */
+void otCryptoSha256Update(const void *aBuf, uint16_t aBufLength);
 
-    for (int i = 0; tests[i].key != NULL; i++)
-    {
-        otCryptoHmacSha256Start(tests[i].key, static_cast<uint16_t>(strlen(tests[i].key)));
-        otCryptoHmacSha256Update(tests[i].data, static_cast<uint16_t>(strlen(tests[i].data)));
-        otCryptoHmacSha256Finish(hash);
+/**
+ * This method finalizes the SHA-256 computation.
+ *
+ * @param[out]  aHash  A pointer to the output buffer.
+ *
+ */
+void otCryptoSha256Finish(uint8_t aHash[otCryptoSha256Size]);
 
-        VerifyOrQuit(memcmp(hash, tests[i].hash, sizeof(tests[i].hash)) == 0,
-                     "HMAC-SHA-256 failed\n");
-    }
-}
+/**
+ * @}
+ *
+ */
 
-int main(void)
-{
-    otCryptoEnable();
-    TestHmacSha256();
-    printf("All tests passed\n");
-    return 0;
-}
+#ifdef __cplusplus
+}  // end of extern "C"
+#endif
+
+#endif  // OPENTHREAD_SHA256_H_

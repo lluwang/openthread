@@ -52,6 +52,9 @@ static otDEFINE_ALIGNED_VAR(sMplBuf, sizeof(Mpl), uint64_t);
 static Mpl *sMpl;
 static bool sForwardingEnabled;
 
+static MessageQueue sSendQueue;
+static Tasklet sSendQueueTask(Ip6::HandleSendQueue, NULL);
+
 static otReceiveIp6DatagramCallback sReceiveIp6DatagramCallback = NULL;
 static void *sReceiveIp6DatagramCallbackContext = NULL;
 static bool sIsReceiveIp6FilterEnabled;
@@ -203,10 +206,24 @@ exit:
 
     if (error == kThreadError_None)
     {
-        HandleDatagram(message, NULL, messageInfo.mInterfaceId, NULL, false);
+        message.SetInterfaceId(messageInfo.mInterfaceId);
+        sSendQueue.Enqueue(message);
+        sSendQueueTask.Post();
     }
 
     return error;
+}
+
+void Ip6::HandleSendQueue(void *aContext)
+{
+    (void)aContext;
+
+    while (sSendQueue.GetHead())
+    {
+        Message *message = sSendQueue.GetHead();
+        sSendQueue.Dequeue(*message);
+        HandleDatagram(*message, NULL, message->GetInterfaceId(), NULL, false);
+    }
 }
 
 ThreadError HandleOptions(Message &message)

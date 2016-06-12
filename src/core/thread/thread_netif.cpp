@@ -65,7 +65,18 @@ ThreadNetif::ThreadNetif(void):
     mMeshForwarder(*this),
     mMleRouter(*this),
     mNetworkDataLocal(*this),
-    mNetworkDataLeader(*this)
+    mNetworkDataLeader(*this),
+#if OPENTHREAD_ENABLE_COMMISSIONER
+    mCommissioner(*this),
+#endif  // OPENTHREAD_ENABLE_COMMISSIONER
+#if OPENTHREAD_ENABLE_DTLS
+    mDtls(*this),
+#endif
+#if OPENTHREAD_ENABLE_JOINER
+    mJoiner(*this),
+#endif  // OPENTHREAD_ENABLE_JOINER
+    mJoinerRouter(*this),
+    mLeader(*this)
 {
     mKeyManager.SetMasterKey(kThreadMasterKey, sizeof(kThreadMasterKey));
 }

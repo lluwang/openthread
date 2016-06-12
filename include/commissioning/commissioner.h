@@ -26,63 +26,45 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "test_util.h"
+/**
+ * @file
+ * @brief
+ *   This file includes the platform abstraction for the Thread Commissioner role.
+ */
 
-#include <string.h>
+#ifndef OPENTHREAD_COMMISSIONER_H_
+#define OPENTHREAD_COMMISSIONER_H_
 
-#include <openthread.h>
-#include <crypto/crypto.h>
-#include <crypto/hmac_sha256.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#include <common/debug.hpp>
+/**
+ * @addtogroup core-commissioning
+ *
+ * @{
+ *
+ */
 
-extern"C" void otSignalTaskletPending(void)
-{
-}
+/**
+ * This function enables the Thread Commissioner role.
+ *
+ */
+ThreadError otCommissionerStart(void);
 
-void TestHmacSha256(void)
-{
-    static const struct
-    {
-        const char *key;
-        const char *data;
-        uint8_t hash[otCryptoSha256Size];
-    } tests[] =
-    {
-        {
-            "\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b",
-            "Hi There",
-            {
-                0xb0, 0x34, 0x4c, 0x61, 0xd8, 0xdb, 0x38, 0x53,
-                0x5c, 0xa8, 0xaf, 0xce, 0xaf, 0x0b, 0xf1, 0x2b,
-                0x88, 0x1d, 0xc2, 0x00, 0xc9, 0x83, 0x3d, 0xa7,
-                0x26, 0xe9, 0x37, 0x6c, 0x2e, 0x32, 0xcf, 0xf7,
-            },
-        },
-        {
-            NULL,
-            NULL,
-            {},
-        },
-    };
+/**
+ * This function disables the Thread Commissioner role.
+ *
+ */
+ThreadError otCommissionerStop(void);
 
-    uint8_t hash[otCryptoSha256Size];
+/**
+ * @}
+ *
+ */
 
-    for (int i = 0; tests[i].key != NULL; i++)
-    {
-        otCryptoHmacSha256Start(tests[i].key, static_cast<uint16_t>(strlen(tests[i].key)));
-        otCryptoHmacSha256Update(tests[i].data, static_cast<uint16_t>(strlen(tests[i].data)));
-        otCryptoHmacSha256Finish(hash);
+#ifdef __cplusplus
+}  // end of extern "C"
+#endif
 
-        VerifyOrQuit(memcmp(hash, tests[i].hash, sizeof(tests[i].hash)) == 0,
-                     "HMAC-SHA-256 failed\n");
-    }
-}
-
-int main(void)
-{
-    otCryptoEnable();
-    TestHmacSha256();
-    printf("All tests passed\n");
-    return 0;
-}
+#endif  // OPENTHREAD_COMMISSIONER_H_

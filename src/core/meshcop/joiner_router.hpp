@@ -28,61 +28,62 @@
 
 /**
  * @file
- * @brief
- *   This file includes the platform abstraction for HMAC SHA-256 computations.
+ *  This file includes definitions for the Joiner Router role.
  */
 
-#ifndef HMAC_SHA256_H_
-#define HMAC_SHA256_H_
+#ifndef JOINER_ROUTER_HPP_
+#define JOINER_ROUTER_HPP_
 
-#include <stdint.h>
+#include <openthread-types.h>
 
-#include <crypto/sha256.h>
+#include <coap/coap_header.hpp>
+#include <coap/coap_server.hpp>
+#include <common/message.hpp>
+#include <mac/mac_frame.hpp>
+#include <net/udp6.hpp>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+namespace Thread {
 
-/**
- * @addtogroup core-security
- *
- * @{
- *
- */
+class ThreadNetif;
 
-/**
- * This method sets the key.
- *
- * @param[in]  aKey        A pointer to the key.
- * @param[in]  aKeyLength  The key length in bytes.
- *
- */
-void otCryptoHmacSha256Start(const void *aKey, uint16_t aKeyLength);
+namespace MeshCoP {
 
-/**
- * This method inputs bytes into the HMAC computation.
- *
- * @param[in]  aBuf        A pointer to the input buffer.
- * @param[in]  aBufLength  The length of @p aBuf in bytes.
- *
- */
-void otCryptoHmacSha256Update(const void *aBuf, uint16_t aBufLength);
+class JoinerRouter
+{
+public:
+    /**
+     * This constructor initializes the Joiner Router object.
+     *
+     * @param[in]  aThreadNetif  A reference to the Thread network interface.
+     *
+     */
+    JoinerRouter(ThreadNetif &aNetif);
 
-/**
- * This method finalizes the hash computation.
- *
- * @param[out]  aHash  A pointer to the output buffer.
- *
- */
-void otCryptoHmacSha256Finish(uint8_t aHash[otCryptoSha256Size]);
+private:
+    static void HandleNetifStateChanged(uint32_t aFlags, void *aContext);
+    void HandleNetifStateChanged(uint32_t aFlags);
 
-/**
- * @}
- *
- */
+    static void HandleUdpReceive(void *aContext, otMessage aMessage, const otMessageInfo *aMessageInfo);
+    void HandleUdpReceive(Message &aMessage, const Ip6::MessageInfo &aMessageInfo);
 
-#ifdef __cplusplus
-}  // end of extern "C"
-#endif
+    static void HandleRelayTransmit(void *aContext, Coap::Header &aHeader,
+                                    Message &aMessage, const Ip6::MessageInfo &aMessageInfo);
+    void HandleRelayTransmit(Coap::Header &aHeader, Message &aMessage, const Ip6::MessageInfo &aMessageInfo);
 
-#endif  // HMAC_SHA256_H_
+    ThreadError SendJoinerEntrust(const Ip6::MessageInfo &aMessageInfo);
+
+    ThreadError GetBorderAgentRloc(uint16_t &aRloc);
+    ThreadError GetJoinerPort(uint16_t &aRloc);
+
+    Ip6::NetifCallback mNetifCallback;
+    uint16_t mJoinerPort;
+
+    Ip6::UdpSocket mSocket;
+    Coap::Resource mRelayTransmit;
+    ThreadNetif &mNetif;
+};
+
+}  // namespace MeshCoP
+}  // namespace Thread
+
+#endif  // JOINER_ROUTER_HPP_

@@ -37,6 +37,8 @@
 
 #include <openthread.h>
 #include <openthread-diag.h>
+#include <commissioning/commissioner.h>
+#include <commissioning/joiner.h>
 
 #include "cli.hpp"
 #include "cli_dataset.hpp"
@@ -59,15 +61,24 @@ const struct Command Interpreter::sCommands[] =
     { "child", &ProcessChild },
     { "childmax", &ProcessChildMax },
     { "childtimeout", &ProcessChildTimeout },
+#if OPENTHREAD_ENABLE_COMMISSIONER
+    { "commissioner", &ProcessCommissioner },
+#endif
     { "contextreusedelay", &ProcessContextIdReuseDelay },
     { "counter", &ProcessCounters },
     { "dataset", &ProcessDataset },
+#if OPENTHREAD_ENABLE_DIAG
+    { "diag", &ProcessDiag },
+#endif
     { "discover", &ProcessDiscover },
     { "eidcache", &ProcessEidCache },
     { "extaddr", &ProcessExtAddress },
     { "extpanid", &ProcessExtPanId },
     { "ifconfig", &ProcessIfconfig },
     { "ipaddr", &ProcessIpAddr },
+#if OPENTHREAD_ENABLE_JOINER
+    { "joiner", &ProcessJoiner },
+#endif
     { "keysequence", &ProcessKeySequence },
     { "leaderdata", &ProcessLeaderData },
     { "leaderpartitionid", &ProcessLeaderPartitionId },
@@ -97,9 +108,6 @@ const struct Command Interpreter::sCommands[] =
     { "thread", &ProcessThread },
     { "version", &ProcessVersion },
     { "whitelist", &ProcessWhitelist },
-#if OPENTHREAD_ENABLE_DIAG
-    { "diag", &ProcessDiag },
-#endif
 };
 
 static otDEFINE_ALIGNED_VAR(sPingTimerBuf, sizeof(Timer), uint64_t);
@@ -1806,6 +1814,7 @@ exit:
     AppendResult(error);
 }
 
+
 void Interpreter::ProcessVersion(int argc, char *argv[])
 {
     sServer->OutputFormat("%s\r\n", otGetVersionString());
@@ -1813,6 +1822,52 @@ void Interpreter::ProcessVersion(int argc, char *argv[])
     (void)argc;
     (void)argv;
 }
+
+#if OPENTHREAD_ENABLE_COMMISSIONER
+
+void Interpreter::ProcessCommissioner(int argc, char *argv[])
+{
+    ThreadError error = kThreadError_None;
+
+    VerifyOrExit(argc > 0, error = kThreadError_Parse);
+
+    if (strcmp(argv[0], "start") == 0)
+    {
+        otCommissionerStart();
+    }
+    else if (strcmp(argv[0], "stop") == 0)
+    {
+        otCommissionerStop();
+    }
+
+exit:
+    AppendResult(error);
+}
+
+#endif  // OPENTHREAD_ENABLE_COMMISSIONER
+
+#if OPENTHREAD_ENABLE_JOINER
+
+void Interpreter::ProcessJoiner(int argc, char *argv[])
+{
+    ThreadError error = kThreadError_None;
+
+    VerifyOrExit(argc > 0, error = kThreadError_Parse);
+
+    if (strcmp(argv[0], "start") == 0)
+    {
+        otJoinerStart();
+    }
+    else if (strcmp(argv[0], "stop") == 0)
+    {
+        otJoinerStop();
+    }
+
+exit:
+    AppendResult(error);
+}
+
+#endif // OPENTHREAD_ENABLE_JOINER
 
 void Interpreter::ProcessWhitelist(int argc, char *argv[])
 {

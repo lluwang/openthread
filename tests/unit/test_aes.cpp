@@ -27,7 +27,10 @@
  */
 
 #include "test_util.h"
+
 #include <openthread.h>
+#include <crypto/crypto.h>
+
 #include <common/debug.hpp>
 #include <crypto/aes_ccm.hpp>
 #include <string.h>
@@ -232,6 +235,7 @@ void TestMacCommandFrame()
 
 int main(void)
 {
+    otCryptoEnable();
     TestMacBeaconFrame();
     TestMacDataFrame();
     TestMacCommandFrame();

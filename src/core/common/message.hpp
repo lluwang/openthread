@@ -112,12 +112,14 @@ struct MessageInfo
     uint8_t          mChildMask[8];      ///< A bit-vector to indicate which sleepy children need to receive this.
     uint16_t         mPanId;             ///< The Destination PAN ID.
     uint8_t          mTimeout;           ///< Seconds remaining before dropping the message.
+    int8_t           mInterfaceId;       ///< The interface ID.
 
     uint8_t          mType : 2;          ///< Identifies the type of message.
     bool             mDirectTx : 1;      ///< Used to indicate whether a direct transmission is required.
     bool             mLinkSecurity : 1;  ///< Indicates whether or not link security is enabled.
     bool             mMleDiscoverRequest : 1;   ///< Identifies MLE Discover Request.
     bool             mMleDiscoverResponse : 1;  ///< Identifies MLE Discover Response.
+    bool             mJoinerEntrust : 1; ///< Indicates whether or not this message is a Joiner Entrust.
 };
 
 /**
@@ -425,6 +427,22 @@ public:
     void SetTimeout(uint8_t aTimeout);
 
     /**
+     * This method returns the interface ID.
+     *
+     * @returns The interface ID.
+     *
+     */
+    int8_t GetInterfaceId(void) const;
+
+    /**
+     * This method sets the interface ID.
+     *
+     * @param[in]  aInterfaceId  The interface ID value.
+     *
+     */
+    void SetInterfaceId(int8_t aInterfaceId);
+
+    /**
      * This method returns whether or not message forwarding is scheduled for direct transmission.
      *
      * @retval TRUE   If message forwarding is scheduled for direct transmission.
@@ -495,6 +513,23 @@ public:
      *
      */
     void SetMleDiscoverResponse(bool aMleDiscoverResponse);
+
+    /**
+     * This method indicates whether or not this message is an Joiner Entrust.
+     *
+     * @retval TRUE   If this message is an Joiner Entrust.
+     * @retval FALSE  If this message is not an Joiner Entrust.
+     *
+     */
+    bool IsJoinerEntrust(void) const;
+
+    /**
+     * This method sets whether or not this message is an Joiner Entrust.
+     *
+     * @param[in]  aLinkSecurityEnabled  TRUE if this message is an Joiner Entrust, FALSE otherwise.
+     *
+     */
+    void SetJoinerEntrust(bool aJoinerEntrust);
 
     /**
      * This method is used to update a checksum value.

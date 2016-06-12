@@ -40,6 +40,7 @@
 #include <common/new.hpp>
 #include <common/tasklet.hpp>
 #include <common/timer.hpp>
+#include <crypto/crypto.h>
 #include <net/icmp6.hpp>
 #include <net/ip6.hpp>
 #include <platform/random.h>
@@ -869,6 +870,7 @@ ThreadError otEnable(void)
     VerifyOrExit(!mEnabled, error = kThreadError_InvalidState);
 
     otLogInfoApi("otEnable\n");
+    otCryptoEnable();
     Message::Init();
     sThreadNetif = new(&sThreadNetifRaw) ThreadNetif;
     Ip6::Ip6::Init();
@@ -1232,6 +1234,30 @@ ThreadError otSendPendingSet(const otOperationalDataset *aDataset, const uint8_t
 {
     return sThreadNetif->GetPendingDataset().SendSetRequest(*aDataset, aTlvs, aLength);
 }
+
+#if OPENTHREAD_ENABLE_COMMISSIONER
+ThreadError otCommissionerStart(void)
+{
+    return sThreadNetif->GetCommissioner().Start();
+}
+
+ThreadError otCommissionerStop(void)
+{
+    return sThreadNetif->GetCommissioner().Stop();
+}
+#endif  // OPENTHREAD_ENABLE_COMMISSIONER
+
+#if OPENTHREAD_ENABLE_JOINER
+ThreadError otJoinerStart(void)
+{
+    return sThreadNetif->GetJoiner().Start();
+}
+
+ThreadError otJoinerStop(void)
+{
+    return sThreadNetif->GetJoiner().Stop();
+}
+#endif  // OPENTHREAD_ENABLE_JOINER
 
 #ifdef __cplusplus
 }  // extern "C"

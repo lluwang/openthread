@@ -498,6 +498,16 @@ void Message::SetTimeout(uint8_t aTimeout)
     mInfo.mTimeout = aTimeout;
 }
 
+int8_t Message::GetInterfaceId(void) const
+{
+    return mInfo.mInterfaceId;
+}
+
+void Message::SetInterfaceId(int8_t aInterfaceId)
+{
+    mInfo.mInterfaceId = aInterfaceId;
+}
+
 bool Message::GetDirectTransmission(void) const
 {
     return mInfo.mDirectTx;
@@ -541,6 +551,16 @@ bool Message::IsMleDiscoverResponse(void) const
 void Message::SetMleDiscoverResponse(bool aMleDiscoverResponse)
 {
     mInfo.mMleDiscoverResponse = aMleDiscoverResponse;
+}
+
+bool Message::IsJoinerEntrust(void) const
+{
+    return mInfo.mJoinerEntrust;
+}
+
+void Message::SetJoinerEntrust(bool aJoinerEntrust)
+{
+    mInfo.mJoinerEntrust = aJoinerEntrust;
 }
 
 uint16_t Message::UpdateChecksum(uint16_t aChecksum, uint16_t aOffset, uint16_t aLength) const
