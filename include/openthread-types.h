@@ -311,24 +311,39 @@ typedef struct otOperationalDataset
     uint16_t          mChannel;                    ///< Channel
 
     bool              mIsActiveTimestampSet : 1;   ///< TRUE if Active Timestamp is set, FALSE otherwise.
-    bool              mIsActiveTimestampGet : 1;   ///< TRUE if Active Timestamp is to get, FALSE otherwise.
     bool              mIsPendingTimestampSet : 1;  ///< TRUE if Pending Timestamp is set, FALSE otherwise.
-    bool              mIsPendingTimestampGet : 1;  ///< TRUE if Pending Timestamp is to get, FALSE otherwise.
     bool              mIsMasterKeySet : 1;         ///< TRUE if Network Master Key is set, FALSE otherwise.
-    bool              mIsMasterKeyGet : 1;         ///< TRUE if Network Master Key is to get, FALSE otherwise.
     bool              mIsNetworkNameSet : 1;       ///< TRUE if Network Name is set, FALSE otherwise.
-    bool              mIsNetworkNameGet : 1;       ///< TRUE if Network Name is to get, FALSE otherwise.
     bool              mIsExtendedPanIdSet : 1;     ///< TRUE if Extended PAN ID is set, FALSE otherwise.
-    bool              mIsExtendedPanIdGet : 1;     ///< TRUE if Extended PAN ID is to get, FALSE otherwise.
     bool              mIsMeshLocalPrefixSet : 1;   ///< TRUE if Mesh Local Prefix is set, FALSE otherwise.
-    bool              mIsMeshLocalPrefixGet : 1;   ///< TRUE if Mesh Local Prefix is to get, FALSE otherwise.
     bool              mIsDelaySet : 1;             ///< TRUE if Delay Timer is set, FALSE otherwise.
-    bool              mIsDelayGet : 1;             ///< TRUE if Delay Timer is to get, FALSE otherwise.
     bool              mIsPanIdSet : 1;             ///< TRUE if PAN ID is set, FALSE otherwise.
-    bool              mIsPanIdGet : 1;             ///< TRUE if PAN ID is to get, FALSE otherwise.
     bool              mIsChannelSet : 1;           ///< TRUE if Channel is set, FALSE otherwise.
-    bool              mIsChannelGet : 1;           ///< TRUE if Channel is to get, FALSE otherwise.
 } otOperationalDataset;
+
+/**
+ * This enumeration represents meshcop TLV types.
+ *
+ */
+typedef enum otMeshcopTlvType
+{
+    OT_MESHCOP_TLV_CHANNEL            = 0,    ///< meshcop Channel TLV
+    OT_MESHCOP_TLV_PANID              = 1,    ///< meshcop Pan Id TLV
+    OT_MESHCOP_TLV_EXTPANID           = 2,    ///< meshcop Extended Pan Id TLV
+    OT_MESHCOP_TLV_NETWORKNAME        = 3,    ///< meshcop Network Name TLV
+    OT_MESHCOP_TLV_PSKC               = 4,    ///< meshcop PSKc TLV
+    OT_MESHCOP_TLV_MASTERKEY          = 5,    ///< meshcop Network Master Key TLV
+    OT_MESHCOP_TLV_LOCALPREFIX        = 7,    ///< meshcop Mesh Local Prefix TLV
+    OT_MESHCOP_TLV_SECURITYPOLICY     = 12,   ///< meshcop Security Policy TLV
+    OT_MESHCOP_TLV_GET                = 13,   ///< meshcop Get TLV
+    OT_MESHCOP_TLV_ACTIVETIMESTAMP    = 14,   ///< meshcop Active Timestamp TLV
+    OT_MESHCOP_TLV_STATE              = 16,   ///< meshcop State TLV
+    OT_MESHCOP_TLV_PENDINGTIMESTAMP   = 51,   ///< meshcop Pending Timestamp TLV
+    OT_MESHCOP_TLV_DELAYTIMER         = 52,   ///< meshcop Delay Timer TLV
+    OT_MESHCOP_TLV_CHANNELMASK        = 53,   ///< meshcop Channel Mask TLV
+    OT_MESHCOP_TLV_DISCOVERYREQUEST   = 128,  ///< meshcop Discovery Request TLV
+    OT_MESHCOP_TLV_DISCOVERYRESPONSE  = 129,  ///< meshcop Discovery Response TLV
+} otMeshcopTlvType;
 
 /**
  * This structure represents an MLE Link Mode configuration.
