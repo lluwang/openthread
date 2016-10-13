@@ -191,8 +191,29 @@ ThreadError DatasetManager::Register(void)
     }
 
     VerifyOrExit((message = mSocket.NewMessage(0)) != NULL, error = kThreadError_NoBufs);
+
     SuccessOrExit(error = message->Append(header.GetBytes(), header.GetLength()));
-    SuccessOrExit(error = message->Append(mLocal.GetBytes(), mLocal.GetSize()));
+
+    if (strcmp(mUriSet, OPENTHREAD_URI_PENDING_SET) == 0)
+    {
+        SuccessOrExit(error = message->Append(mLocal.GetBytes(), mLocal.GetSize()));
+    }
+    else
+    {
+        const Tlv *cur = reinterpret_cast<const Tlv *>(mLocal.GetBytes());
+        const Tlv *end = reinterpret_cast<const Tlv *>(mLocal.GetBytes() + mLocal.GetSize());
+
+        while (cur < end)
+        {
+            Tlv::Type type = cur->GetType();
+
+            if (type != Tlv::kChannel && type != Tlv::kMeshLocalPrefix &&
+                type != Tlv::kPanId && type != Tlv::kNetworkMasterKey)
+            {
+                SuccessOrExit(error = message->Append(cur, cur->GetLength() + sizeof(Tlv)));
+            }
+        }
+    }
 
     mMle.GetLeaderAddress(leader);
 
